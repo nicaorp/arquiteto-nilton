@@ -1,0 +1,262 @@
+/**/
+:root {
+     /*=======Main theme colors=======*/
+  --first-color: #ffae30;
+  --second-color: #adacb3;
+  --third-color: rgb(0, 0, 0);
+  /*=======Hover colors=======*/
+  --hover-color: #614fd0;
+  /*=======Background colors=======*/
+  --body-bg-color: #fefefe;
+  --card-bg-color: #fff;
+  --modal-bg-color: #fff;
+  --bg-transparent-color: rgba(0, 0, 0, 0.1);
+  --transparent-color-01: rgba(0, 0, 0, 0.1);
+  --transparent-color-02: rgba(106, 89, 209, 0.1);
+  --line-color: #d7d7d7;
+}
+
+.nav-button a {
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    scroll-behavior: smooth;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    letter-spacing: .5ch;
+    line-height: 1.15em;
+  }
+
+/*NAVIGATION*/
+
+header {
+    width: 100%;
+}
+
+.nav-button {
+    z-index: 9999;
+    position: fixed;
+    left: 100px;
+    align-items: flex-start;
+    top: 40px;
+    cursor: pointer;
+    color:white;
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover,
+.nav-close-btn:hover {
+    transform: scale(0.9);
+}
+
+.nav-close-btn {
+    position: absolute;
+    background: url(/public/_imgs/close-btn.png);
+    background-repeat: no-repeat;
+    filter: var(--color-filter);
+    background-size: 30px;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+
+  .menu-box {
+    z-index: 9999999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    text-align: left;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color: var(--third-color);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+    opacity: 0; 
+    transition: .5s ease; 
+  }
+
+.menu-box.active {
+visibility: visible;
+opacity: 1;
+}
+
+.nav-box {
+    position: absolute;
+    top: 2rem;
+    padding-left: 4rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.ul-box {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: .03px;
+    line-height: 20px;
+    text-align: left;
+    text-size-adjust: 100%;
+}
+
+.ul-box li {
+    padding: .8rem 0;
+    transition: transform 0.3s ease;
+}
+
+.ul-box li:hover {
+    transform: scale(0.99);
+}
+
+.ul-box li a {
+    
+    color: var(--second-color);
+}
+
+a {
+    text-decoration: underline 0.10em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 900ms;
+    text-underline-offset: 5px;
+}
+
+a:hover {
+    text-decoration-color: var(--second-color);
+}
+
+
+/*HOME SECTION*/
+.home {
+    height: 100%;
+    display: block;
+    width: 100%;
+    
+}
+
+.header-img {
+    position: relative;
+    width: 100%;
+    background-image: url(/public/_imgs/kaza3d1.jpg);
+    background-position: 50%;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+@keyframes logoCall {
+    0% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+        filter: blur(2px);
+    }
+    90% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+    
+}
+@keyframes h1Call {
+    0% {
+        opacity: 0;
+    }
+    32% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+    90% {
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+.header-logo {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+    position: absolute;
+    top:60px;
+    -webkit-animation: logoCall 1.2s steps(90);
+    animation: logoCall 1.5s steps(90);
+}
+
+.header-logo h2 {
+    text-align: center;
+}
+
+.main-text-box {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.main-text-content {
+    text-align: center;
+}
+
+.main-text-content h2 {
+    -webkit-animation: logoCall 2s steps(90);
+    animation: logoCall 1.7s steps(90);
+}
+
+.main-text-content h3 {
+    margin: 30px;
+    -webkit-animation: logoCall 2.5s steps(90);
+    animation: logoCall 2s steps(90);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
