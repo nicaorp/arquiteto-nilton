@@ -156,17 +156,17 @@ a:hover {
 .header-img {
     position: relative;
     width: 100%;
-    background-image: url(/public/_imgs/imp1.jpg);
+    background-image: url(/public/_imgs/flavia1ok.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 100vh;
     min-height: 100vh;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: 2s;
+    transition: 5s;
 
     animation-name: fullScreenFade;
     animation-direction: alternate-reverse;
@@ -179,16 +179,16 @@ a:hover {
 
 @keyframes fullScreenFade {
     0% {
-        background-image: url(/public/_imgs/flavia2.jpg);
+        background-image: url(/public/_imgs/flavia2ok.jpg);
     }
     33% {
-        background-image: url(/public/_imgs/flavia3.jpg);
+        background-image: url(/public/_imgs/flavia3ok.jpg);
     }
     66% {
-        background-image: url(/public/_imgs/flavia4.jpg);
+        background-image: url(/public/_imgs/flavia4ok.jpg);
     }
     100% {
-        background-image: url(/public/_imgs/flavia5.jpg);
+        background-image: url(/public/_imgs/flavia5ok.jpg);
     }
 }
 
