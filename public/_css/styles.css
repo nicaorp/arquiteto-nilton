@@ -156,16 +156,40 @@ a:hover {
 .header-img {
     position: relative;
     width: 100%;
-    background-image: url(/public/_imgs/kaza3d1.jpg);
-    background-position: 50%;
+    background-image: url(/public/_imgs/imp1.jpg);
+    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     height: 100%;
     min-height: 100vh;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    transition: 2s;
+
+    animation-name: fullScreenFade;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;    
+}
+
+@keyframes fullScreenFade {
+    0% {
+        background-image: url(/public/_imgs/flavia2.jpg);
+    }
+    33% {
+        background-image: url(/public/_imgs/flavia3.jpg);
+    }
+    66% {
+        background-image: url(/public/_imgs/flavia4.jpg);
+    }
+    100% {
+        background-image: url(/public/_imgs/flavia5.jpg);
+    }
 }
 
 @keyframes logoCall {
