@@ -288,6 +288,7 @@ h3 {
 .main-text-box {
     display: flex;
     margin: auto;
+    margin-top: 40vh;
     align-items: center;
     justify-content: center;
     align-self: center;
