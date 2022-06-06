@@ -317,12 +317,14 @@ h3 {
     font-weight: 500;
     margin-top: 20px;
     margin-bottom: 20px;
-  }
+    animation: h1Call 3s steps(90);
+}
 
 
   .header-img .scroll-down i {
     color: #fff;
     font-size: 1.2em;
+    
     animation: arrow-down ease 2s infinite;
   }
   
