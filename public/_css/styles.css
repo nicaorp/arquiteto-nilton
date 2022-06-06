@@ -16,9 +16,6 @@
     --line-color: #d7d7d7;
 }
 
-.nav-button a {
-    color: white;
-}
 
 * {
     margin: 0;
@@ -40,6 +37,11 @@ html {
 header {
     width: 100%;
 }
+
+.nav-button a {
+    color: white;
+}
+
 
 .nav-button {
     z-index: 9999;
@@ -156,22 +158,40 @@ a:hover {
 
 @keyframes fullScreenFade {
     0% {
-        background-image: url(/public/_imgs/flavia1ok.jpg);
+        background-image: url(/public/_imgs/flavia1ok.jpg), url(/public/_imgs/imp2OKK.jpg);
     }
 
-    50% {
-        background-image: url(/public/_imgs/flavia2ok.jpg)
+    20% {
+        background-image:url(/public/_imgs/imp2OKK.jpg),  url(/public/_imgs/flavia3ok.jpg);
+    }
+    40% {
+        background-image: url(/public/_imgs/flavia3ok.jpg), url(/public/_imgs/vtr6OK.jpg);
+    }
+    60% {
+        background-image: url(/public/_imgs/vtr6OK.jpg), url(/public/_imgs/vander1OKK.jpg);
+    }
+    80% {
+        background-image: url(/public/_imgs/vander1OKK.jpg), url(/public/_imgs/imp3OKK.jpg);
     }
 
     100% {
-        background-image: url(/public/_imgs/flavia3ok.jpg);
+        background-image: url(/public/_imgs/imp3OKK.jpg);
     }
 }
 
 .header-img {
+    -webkit-animation-name: fullScreenFade;
+    -webkit-animation-direction: alternate;
+    /* -webkit-animation-play-state: running; */
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 40s;
+    transition-delay: 5s ;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+
+
     position: relative;
     width: 100%;
-    background-image: url(/public/_imgs/flavia1ok.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -181,16 +201,11 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: 5s;
+    /* transition: 5s; */
 
 
-    -webkit-animation-name: fullScreenFade;
-    -webkit-animation-direction: alternate-reverse;
-    -webkit-animation-play-state: running;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-duration: 15s;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: infinite;
+
+
 
 }
 
