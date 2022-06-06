@@ -1,19 +1,19 @@
 /**/
 :root {
-     /*=======Main theme colors=======*/
-  --first-color: #ffae30;
-  --second-color: #adacb3;
-  --third-color: rgb(0, 0, 0);
-  /*=======Hover colors=======*/
-  --hover-color: #614fd0;
-  /*=======Background colors=======*/
-  --body-bg-color: #fefefe;
-  --card-bg-color: #fff;
-  --modal-bg-color: #fff;
-  --bg-transparent-color: rgba(0, 0, 0, 0.1);
-  --transparent-color-01: rgba(0, 0, 0, 0.1);
-  --transparent-color-02: rgba(106, 89, 209, 0.1);
-  --line-color: #d7d7d7;
+    /*=======Main theme colors=======*/
+    --first-color: #ffae30;
+    --second-color: #adacb3;
+    --third-color: rgb(0, 0, 0);
+    /*=======Hover colors=======*/
+    --hover-color: #614fd0;
+    /*=======Background colors=======*/
+    --body-bg-color: #fefefe;
+    --card-bg-color: #fff;
+    --modal-bg-color: #fff;
+    --bg-transparent-color: rgba(0, 0, 0, 0.1);
+    --transparent-color-01: rgba(0, 0, 0, 0.1);
+    --transparent-color-02: rgba(106, 89, 209, 0.1);
+    --line-color: #d7d7d7;
 }
 
 .nav-button a {
@@ -26,13 +26,14 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     scroll-behavior: smooth;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
     letter-spacing: .5ch;
     line-height: 1.15em;
-  }
+}
 
 /*NAVIGATION*/
 
@@ -47,7 +48,7 @@ header {
     align-items: flex-start;
     top: 40px;
     cursor: pointer;
-    color:white;
+    color: white;
     transition: transform 0.3s ease;
 }
 
@@ -70,10 +71,10 @@ header {
     margin: 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
+}
 
 
-  .menu-box {
+.menu-box {
     z-index: 9999999;
     position: fixed;
     left: 0;
@@ -89,13 +90,13 @@ header {
     margin-left: auto;
     margin-right: auto;
     visibility: hidden;
-    opacity: 0; 
-    transition: .5s ease; 
-  }
+    opacity: 0;
+    transition: .5s ease;
+}
 
 .menu-box.active {
-visibility: visible;
-opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .nav-box {
@@ -130,7 +131,7 @@ opacity: 1;
 }
 
 .ul-box li a {
-    
+
     color: var(--second-color);
 }
 
@@ -150,7 +151,21 @@ a:hover {
     height: 100%;
     display: block;
     width: 100%;
-    
+
+}
+
+@keyframes fullScreenFade {
+    0% {
+        background-image: url(/public/_imgs/flavia1ok.jpg);
+    }
+
+    50% {
+        background-image: url(/public/_imgs/flavia2ok.jpg)
+    }
+
+    100% {
+        background-image: url(/public/_imgs/flavia3ok.jpg);
+    }
 }
 
 .header-img {
@@ -168,119 +183,93 @@ a:hover {
     align-items: center;
     transition: 5s;
 
-    animation-name: fullScreenFade;
-    animation-direction: alternate-reverse;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
-    animation-duration: 20s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;    
-}
 
-@keyframes fullScreenFade {
-    0% {
-        background-image: url(/public/_imgs/flavia2ok.jpg);
-    }
-    33% {
-        background-image: url(/public/_imgs/flavia3ok.jpg);
-    }
-    66% {
-        background-image: url(/public/_imgs/flavia4ok.jpg);
-    }
-    100% {
-        background-image: url(/public/_imgs/flavia5ok.jpg);
-    }
-}
+    -webkit-animation-name: fullScreenFade;
+    -webkit-animation-direction: alternate-reverse;
+    -webkit-animation-play-state: running;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 15s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
 
-@keyframes logoCall {
-    0% {
-        opacity: 0;
-    }
-    55% {
-        opacity: 0;
-        filter: blur(2px);
-    }
-    90% {
-        filter: blur(0px);
-    }
-    100% {
-        filter: blur(0);
-        opacity: 1;
-    }
-    
-}
-@keyframes h1Call {
-    0% {
-        opacity: 0;
-    }
-    32% {
-        opacity: 0;
-        filter: blur(5px);
-    }
-    90% {
-        filter: blur(0px);
-    }
-    100% {
-        opacity: 1;
-    }
-    
-}
-
-.header-logo {
-    display: block;
-    text-align: center;
-    max-width: 100%;
-    position: absolute;
-    top:60px;
-    -webkit-animation: logoCall 1.2s steps(90);
-    animation: logoCall 1.5s steps(90);
-}
-
-.header-logo h2 {
-    text-align: center;
-}
-
-.main-text-box {
-    display: flex;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-}
-
-.main-text-content {
-    text-align: center;
-}
-
-.main-text-content h2 {
-    -webkit-animation: logoCall 2s steps(90);
-    animation: logoCall 1.7s steps(90);
-}
-
-.main-text-content h3 {
-    margin: 30px;
-    -webkit-animation: logoCall 2.5s steps(90);
-    animation: logoCall 2s steps(90);
 }
 
 
 
+    @keyframes logoCall {
+        0% {
+            opacity: 0;
+        }
 
+        55% {
+            opacity: 0;
+            filter: blur(2px);
+        }
 
+        90% {
+            filter: blur(0px);
+        }
 
+        100% {
+            filter: blur(0);
+            opacity: 1;
+        }
 
+    }
 
+    @keyframes h1Call {
+        0% {
+            opacity: 0;
+        }
 
+        32% {
+            opacity: 0;
+            filter: blur(5px);
+        }
 
+        90% {
+            filter: blur(0px);
+        }
 
+        100% {
+            opacity: 1;
+        }
 
+    }
 
+    .header-logo {
+        display: block;
+        text-align: center;
+        max-width: 100%;
+        position: absolute;
+        top: 60px;
+        -webkit-animation: logoCall 1.2s steps(90);
+        animation: logoCall 1.5s steps(90);
+    }
 
+    .header-logo h2 {
+        text-align: center;
+    }
 
+    .main-text-box {
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+    }
 
+    .main-text-content {
+        text-align: center;
+    }
 
+    .main-text-content h2 {
+        -webkit-animation: logoCall 2s steps(90);
+        animation: logoCall 1.7s steps(90);
+    }
 
-
-
-
-
+    .main-text-content h3 {
+        margin: 30px;
+        -webkit-animation: logoCall 2.5s steps(90);
+        animation: logoCall 2s steps(90);
+    }
