@@ -238,12 +238,12 @@ a:hover {
         opacity: 0;
     }
 
-    32% {
+    52% {
         opacity: 0;
         filter: blur(5px);
     }
 
-    90% {
+    70% {
         filter: blur(0px);
     }
 
@@ -300,14 +300,14 @@ h3 {
 
 .main-text-content h2 {
     -webkit-animation: logoCall 2s steps(90);
-    animation: logoCall 1.7s steps(90);
+    animation: h1Call 2.3s steps(90);
 }
 
 .main-text-content h3 {
     text-shadow: rgb(87, 87, 87) 1px 1px 1px;
     margin: 40px;
     -webkit-animation: logoCall 2.5s steps(90);
-    animation: logoCall 2s steps(90);
+    animation: h1Call 2.6s steps(90);
 }
 
 
