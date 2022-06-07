@@ -3,7 +3,7 @@
 const menuBtn = document.querySelector(".nav-button");
 const closeBtn = document.querySelector(".nav-close-btn");
 const menuBox =  document.querySelector(".menu-box");
-const liItem = document.querySelectorAll("li a");
+const liItem = document.querySelectorAll(".ul-box a");
 
 
 menuBtn.addEventListener('click', () => {
@@ -13,5 +13,12 @@ menuBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     menuBox.classList.remove("active");
 });
+
+liItem.forEach(navItem => {
+    navItem.addEventListener("click", () => {
+        menuBox.classList.remove("active");
+    });
+});
+
 
 

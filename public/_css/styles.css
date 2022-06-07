@@ -6,6 +6,7 @@
     --first-color: #ffae30;
     --second-color: #080808;
     --third-color: rgb(0, 0, 0);
+    --menu-items-color: rgb(163, 163, 163);
     /*=======Hover colors=======*/
     --hover-color: #614fd0;
     /*=======Background colors=======*/
@@ -33,6 +34,7 @@ html {
     font-weight: 400;
     letter-spacing: .5ch;
     background-color: var(--second-color);
+    
 
     scroll-behavior: smooth;
 }
@@ -49,7 +51,7 @@ html {
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--scroll-thumb-over-color);
+    background: rgb(252, 196, 94)
   }
 
 
@@ -117,6 +119,23 @@ header {
     transition: .5s ease;
 }
 
+.menu-box .media-icons {
+    position: absolute;
+    left: 4.8rem;
+    bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-box .media-icons a {
+    font-size: 2em;
+    color: var(--menu-items-color);
+}
+
+.menu-box .media-icons .visite-instagram {
+    font-size: 1em;
+}
+
 .menu-box.active {
     visibility: visible;
     opacity: 1;
@@ -155,7 +174,7 @@ header {
 
 .ul-box li a {
 
-    color: var(--second-color);
+    color: var(--menu-items-color);
 }
 
 a {
@@ -165,7 +184,7 @@ a {
 }
 
 a:hover {
-    text-decoration-color: var(--second-color);
+    text-decoration-color: var(--menu-items-color);
 }
 
 
@@ -411,23 +430,43 @@ h3 {
 .content {
     display: block;
     width: 100%;
+    animation: ;
 }
+
+
 
 .projects-list {
     margin: 0 auto;
     display: grid;
-    gap: 20px;
-    max-width: 70%;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .project-card {
     position: relative;
     height: 200px;
-    
     overflow: hidden;
     cursor: pointer;
 }
+
+.project-card .overlay {
+    position: absolute;
+    z-index: 776;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+
+.project-card:hover .overlay {
+    background-color: rgba(0, 0, 0, .3);
+    opacity: 1;
+}
+
+
 
 .projects-list .project-card .info {
     z-index: 777;
@@ -438,10 +477,13 @@ h3 {
     left: 0;
 }
 
-
 .projects-list .project-card img {
     background-size: cover;
     width: 100%;
-    height: 100%;
-    
+    height: 100%;    
+    transition: .4s ease-in-out;
 }
+
+.projects-list .project-card:hover img {
+    transform: scale(105%) ;
+} 
