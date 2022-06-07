@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
 /**/
 :root {
     /*=======Main theme colors=======*/
     --first-color: #ffae30;
-    --second-color: #adacb3;
+    --second-color: #080808;
     --third-color: rgb(0, 0, 0);
     /*=======Hover colors=======*/
     --hover-color: #614fd0;
@@ -15,6 +16,7 @@
     --transparent-color-01: rgba(0, 0, 0, 0.1);
     --transparent-color-02: rgba(106, 89, 209, 0.1);
     --line-color: #d7d7d7;
+    --box-shadow: 1px 1px 4px rgba(197, 196, 196, 0.6);
 }
 
 
@@ -30,9 +32,26 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
     letter-spacing: .5ch;
-    
+    background-color: var(--second-color);
+
     scroll-behavior: smooth;
 }
+
+/*=======Scroll bar=======*/
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--second-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--first-color);
+    border-radius: 2em;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-over-color);
+  }
+
 
 /*NAVIGATION*/
 
@@ -270,14 +289,14 @@ a:hover {
 
 h2 {
     font-family: 'Cormorant Garamond', sans-serif;
-    
+
     font-size: 2rem;
     text-shadow: rgb(87, 87, 87) 1px 1px 1px;
-    
+
 }
 
 h3 {
-    
+
     font-family: 'Cormorant Garamond', serif;
 }
 
@@ -295,11 +314,11 @@ h3 {
 }
 
 .main-text-content {
-    
+
     text-align: center;
     margin: 0 30px;
-    
-    
+
+
 }
 
 .main-text-content h2 {
@@ -328,38 +347,101 @@ h3 {
 }
 
 
-  .header-img .scroll-down i {
+.header-img .scroll-down i {
     color: #fff;
     font-size: 1.2em;
-    
+
     animation: arrow-down ease 2s infinite;
-  }
-  
-  @keyframes arrow-down {
+}
+
+@keyframes arrow-down {
     0% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  
+
     30% {
-      transform: translateY(10px);
+        transform: translateY(10px);
     }
-  }
-  
-  /*=======ALL SECTION COMMOM STYLES=======*/
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .section {
+}
+
+/*=======ALL SECTION COMMOM STYLES=======*/
+
+.projetos {
+    height: 100%;
+    display: block;
+    width: 100%;
+}
+
+.section {
     position: relative;
     max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
-    padding: 6rem 2rem 2rem;
-  }
+    padding: 3rem 2rem 2rem;
+}
 
 
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.container {
+    position: relative;
+    flex-direction: column;
+}
+
+/* -------PROJETOS------- */
+
+
+.projects {
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+}
+
+.container h2 {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: var(--first-color);
+}
+
+.content {
+    display: block;
+    width: 100%;
+}
+
+.projects-list {
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    max-width: 70%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.project-card {
+    position: relative;
+    height: 200px;
+    
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.projects-list .project-card .info {
+    z-index: 777;
+    color: white;
+    position: absolute;
+    margin: 20px;
+    bottom: 0;
+    left: 0;
+}
+
+
+.projects-list .project-card img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    
+}
