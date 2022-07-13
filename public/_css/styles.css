@@ -4,7 +4,7 @@
 :root {
     /*=======Main theme colors=======*/
     --first-color: rgb(153, 153, 153);
-    --second-color: #0b1109;
+    --second-color: #121d0f;
     --third-color: rgb(0, 0, 0);
     --menu-items-color: rgb(163, 163, 163);
     /*=======Hover colors=======*/
@@ -511,10 +511,13 @@ h3 {
 
 .about-us .container {
     color: rgb(207, 204, 204);
-
+    -webkit-animation: logoCall 1.2s steps(90);
+    animation: logoCall 1.5s steps(90);
 }
 
 .about-box {
+
+
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -4,7 +4,7 @@
 :root {
     /*=======Main theme colors=======*/
     --first-color: #909caa;
-    --second-color: #0c140a;
+    --second-color: #121d0f;
     --third-color: rgb(0, 0, 0);
     --menu-items-color: rgb(163, 163, 163);
     /*=======Hover colors=======*/
@@ -218,12 +218,33 @@ a:hover {
 }
 
 /* -------PROJETOS------- */
+@keyframes logoCall {
+    0% {
+        opacity: 0;
+    }
 
+    55% {
+        opacity: 0;
+        filter: blur(2px);
+    }
+
+    90% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+
+}
 
 .projects {
     width: 100%;
     min-height: 100vh;
     display: block;
+    -webkit-animation: logoCall 2s steps(90);
+    animation: logoCall 2s steps(90);
 }
 
 .container h2 {
