@@ -3,8 +3,8 @@
 /**/
 :root {
     /*=======Main theme colors=======*/
-    --first-color: #ffae30;
-    --second-color: #080808;
+    --first-color: #909caa;
+    --second-color: #0c140a;
     --third-color: rgb(0, 0, 0);
     --menu-items-color: rgb(163, 163, 163);
     /*=======Hover colors=======*/
@@ -282,8 +282,13 @@ a:hover {
     left: 0;
 }
 
+.projects .flex-center {
+    align-items: flex-end;
+}
+
 .nome-projeto {
-    
+    font-style: italic;
+    font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 

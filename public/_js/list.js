@@ -8,12 +8,12 @@ class Projetos {
 
 
 card = [
-    {id: 1, nome: "Kleber", imagem: "/public/_imgs/PORTFOLIO/kleber/kleber1OK.jpg"},
-    {id: 2, nome: "Mileny", imagem: "/public/_imgs/PORTFOLIO/mileny/mileny1OK.jpg"},
-    {id: 3, nome: "Predio", imagem: "/public/_imgs/PORTFOLIO/predio/predio1OK.jpg"},
-    {id: 4, nome: "Rancho", imagem: "/public/_imgs/PORTFOLIO/rancho/rancho1OK.jpg"},
-    {id: 5, nome: "Vander", imagem: "/public/_imgs/PORTFOLIO/vander/vander1OK.jpg"},
-    {id: 6, nome: "Braulio", imagem: "/public/_imgs/PORTFOLIO/braulio/braulio1OK.jpg"},
+    {id: 1, nome: "RESIDENCIAL 1", imagem: "/public/_imgs/PORTFOLIO/kleber/kleber1OK.jpg"},
+    {id: 2, nome: "PISCINA RESIDENCIAL", imagem: "/public/_imgs/PORTFOLIO/mileny/mileny1OK.jpg"},
+    {id: 3, nome: "EDFÍCIDO RESIDENCIAL", imagem: "/public/_imgs/PORTFOLIO/predio/predio1OK.jpg"},
+    {id: 4, nome: "RANCHO", imagem: "/public/_imgs/PORTFOLIO/rancho/rancho1OK.jpg"},
+    {id: 5, nome: "FACHADA RESIDENCIAL", imagem: "/public/_imgs/PORTFOLIO/vander/vander1OK.jpg"},
+    {id: 6, nome: "RESIDENCIAL 2", imagem: "/public/_imgs/PORTFOLIO/braulio/braulio1OK.jpg"},
 ]
 
 let projectsCards = null;
@@ -71,7 +71,7 @@ function carregaHome() {
    
 
 
-const kleber = {id: "0", name: "Kleber", imgsBaixa: [
+const kleber = {id: "0", name: "RESIDENCIAL 1", imgsBaixa: [
     { src: "/public/_imgs/PORTFOLIO/kleber/kleber1OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/kleber/kleber2OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/kleber/kleber3OK.jpg"},
@@ -91,7 +91,7 @@ const kleber = {id: "0", name: "Kleber", imgsBaixa: [
         {src: "/public/_imgs/PORTFOLIO/kleber/kleber8.jpg"}]
     }
 
-const mileny = {id: "1", name: "Mileny", imgsBaixa: [
+const mileny = {id: "1", name: "PISCINA RESIDENCIAL", imgsBaixa: [
     { src: "/public/_imgs/PORTFOLIO/mileny/mileny1OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/mileny/mileny2OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/mileny/mileny3OK.jpg"},
@@ -113,7 +113,7 @@ const mileny = {id: "1", name: "Mileny", imgsBaixa: [
         {src: "/public/_imgs/PORTFOLIO/mileny/mileny9.jpg"}]
     }
 
-const predio = {id: "2", name: "Prédio", imgsBaixa: [
+const predio = {id: "2", name: "EDFÍCIO RESIDENCIAL", imgsBaixa: [
     { src: "/public/_imgs/PORTFOLIO/predio/predio1OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/predio/predio2OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/predio/predio3OK.jpg"}],
@@ -123,7 +123,7 @@ const predio = {id: "2", name: "Prédio", imgsBaixa: [
         {src: "/public/_imgs/PORTFOLIO/predio/predio3.jpg"}]
     }
 
-const rancho = {id: "3", name: "Rancho", imgsBaixa: [
+const rancho = {id: "3", name: "RANCHO", imgsBaixa: [
     { src: "/public/_imgs/PORTFOLIO/rancho/rancho1OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/rancho/rancho2OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/rancho/rancho3OK.jpg"},
@@ -139,7 +139,7 @@ const rancho = {id: "3", name: "Rancho", imgsBaixa: [
         {src: "/public/_imgs/PORTFOLIO/rancho/rancho6.jpg"}]
     }
 
-const vander = {id: "4", name: "Vander", imgsBaixa: [
+const vander = {id: "4", name: "FACHADA RESIDENCIAL", imgsBaixa: [
     { src: "/public/_imgs/PORTFOLIO/vander/vander1OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/vander/vander2OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/vander/vander3OK.jpg"},
@@ -153,7 +153,7 @@ const vander = {id: "4", name: "Vander", imgsBaixa: [
         {src: "/public/_imgs/PORTFOLIO/vander/vander5.jpg"}]
     }
 
-const braulio = {id: "5", name: "Braulio", imgsBaixa: [
+const braulio = {id: "5", name: "RESIDENCIAL 2", imgsBaixa: [
     { src: "/public/_imgs/PORTFOLIO/braulio/braulio1OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/braulio/braulio2OK.jpg"},
     { src: "/public/_imgs/PORTFOLIO/braulio/braulio3OK.jpg"},
