@@ -189,9 +189,10 @@ const braulio = {id: "5", name: "Braulio", imgsBaixa: [
         if (idNumber == projectNumber) {
 
         const imgsBaixa = projects[i].imgsBaixa
+        const imgsAlta = projects[i].imgsAlta
 
         var container = document.querySelector(".projects-list");
-        
+        var nomeProjeto = document.querySelector(".nome-projeto");
 
         for (let j = 0; j < imgsBaixa.length; j++ ) {
             
@@ -199,18 +200,23 @@ const braulio = {id: "5", name: "Braulio", imgsBaixa: [
             var projectCard = document.createElement("div");
             let overlay = document.createElement("div");
             let img = document.createElement("img");
+            let linkImgAlta = document.createElement("a");
             let imgPath = imgsBaixa[j].src;
             
+            linkImgAlta.setAttribute("href", imgsAlta[j].src);
+            linkImgAlta.setAttribute("data-lightbox", "mygallery");
             overlay.classList.add("overlay");
             projectCard.classList.add("project-card");
             img.classList.add("img-project");
 
 
-            container.appendChild(projectCard);
+            container.appendChild(linkImgAlta);
+            linkImgAlta.appendChild(projectCard);
+            
             projectCard.appendChild(overlay);
             projectCard.appendChild(img);
 
-
+            nomeProjeto.innerHTML = projects[i].name
             img.setAttribute("src", imgPath);
             }
         }
