@@ -294,11 +294,16 @@ a:hover {
 .header-logo {
     display: block;
     text-align: center;
-    max-width: 100%;
+    max-width: 30%;
     position: absolute;
-    top: 60px;
+    top: 10px;
     -webkit-animation: logoCall 1.2s steps(90);
     animation: logoCall 1.5s steps(90);
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
 }
 
 @font-face {
@@ -430,7 +435,7 @@ h3 {
 .content {
     display: block;
     width: 100%;
-    animation: ;
+    
 }
 
 

@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+/**/
+:root {
+    /*=======Main theme colors=======*/
+    --first-color: #ffae30;
+    --second-color: #080808;
+    --third-color: rgb(0, 0, 0);
+    --menu-items-color: rgb(163, 163, 163);
+    /*=======Hover colors=======*/
+    --hover-color: #614fd0;
+    /*=======Background colors=======*/
+    --body-bg-color: #fefefe;
+    --card-bg-color: #fff;
+    --modal-bg-color: #fff;
+    --bg-transparent-color: rgba(0, 0, 0, 0.1);
+    --transparent-color-01: rgba(0, 0, 0, 0.1);
+    --transparent-color-02: rgba(106, 89, 209, 0.1);
+    --line-color: #d7d7d7;
+    --box-shadow: 1px 1px 4px rgba(197, 196, 196, 0.6);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: .5ch;
+    background-color: var(--second-color);
+    
+
+    scroll-behavior: smooth;
+}
+
+/*=======Scroll bar=======*/
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--second-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--first-color);
+    border-radius: 2em;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(252, 196, 94)
+  }
+
+
+/*NAVIGATION*/
+
+header {
+    width: 100%;
+}
+
+.nav-button a {
+    color: white;
+}
+
+
+.nav-button {
+    z-index: 9999;
+    position: fixed;
+    left: 5%;
+    align-items: flex-start;
+    top: 40px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover,
+.nav-close-btn:hover {
+    transform: scale(0.9);
+}
+
+.nav-close-btn {
+    position: absolute;
+    background: url(/public/_imgs/close-btn.png);
+    background-repeat: no-repeat;
+    filter: var(--color-filter);
+    background-size: 30px;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.menu-box {
+    z-index: 9999999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    text-align: left;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color: var(--third-color);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.menu-box .media-icons {
+    position: absolute;
+    left: 4.8rem;
+    bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-box .media-icons a {
+    font-size: 2em;
+    color: var(--menu-items-color);
+}
+
+.menu-box .media-icons .visite-instagram {
+    font-size: 1em;
+}
+
+.menu-box.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-box {
+    position: absolute;
+    top: 2rem;
+    padding-left: 4rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.ul-box {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: .03px;
+    line-height: 20px;
+    text-align: left;
+    text-size-adjust: 100%;
+}
+
+.ul-box li {
+    padding: .8rem 0;
+    transition: transform 0.3s ease;
+}
+
+.ul-box li:hover {
+    transform: scale(0.99);
+}
+
+.ul-box li a {
+
+    color: var(--menu-items-color);
+}
+
+a {
+    text-decoration: underline 0.10em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 900ms;
+    text-underline-offset: 5px;
+}
+
+a:hover {
+    text-decoration-color: var(--menu-items-color);
+}
+
+
+/*=======ALL SECTION COMMOM STYLES=======*/
+
+.projetos {
+    height: 100%;
+    display: block;
+    width: 100%;
+}
+
+.section {
+    position: relative;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 2rem 2rem;
+}
+
+
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    flex-direction: column;
+}
+
+/* -------PROJETOS------- */
+
+
+.projects {
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+}
+
+.container h2 {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: var(--first-color);
+}
+
+.content {
+    display: block;
+    width: 100%;
+    
+}
+
+
+
+.projects-list {
+    margin: 0 auto;
+    display: grid;
+    gap: 5px;
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.project-card {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project-card .overlay {
+    position: absolute;
+    z-index: 776;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+
+.project-card:hover .overlay {
+    background-color: rgba(0, 0, 0, .3);
+    opacity: 1;
+}
+
+
+
+.projects-list .project-card .info {
+    z-index: 777;
+    color: white;
+    position: absolute;
+    margin: 20px;
+    bottom: 0;
+    left: 0;
+}
+
+.projects-list .project-card img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;    
+    transition: .4s ease-in-out;
+}
+
+.projects-list .project-card:hover img {
+    transform: scale(105%) ;
+} 
