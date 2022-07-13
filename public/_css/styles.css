@@ -198,27 +198,27 @@ a:hover {
 
 @keyframes fullScreenFade {
     0% {
-        background-image: url(/public/_imgs/flavia1ok.jpg), url(/public/_imgs/imp2OKK.jpg);
+        background-image: url(/public/_imgs/home/home1OK.jpg), url(/public/_imgs/home/home2OK.jpg);
     }
 
     20% {
-        background-image: url(/public/_imgs/imp2OKK.jpg), url(/public/_imgs/flavia2ok.jpg);
+        background-image: url(/public/_imgs/home/home2OK.jpg), url(/public/_imgs/home/home3OK.jpg);
     }
 
     40% {
-        background-image: url(/public/_imgs/flavia2ok.jpg), url(/public/_imgs/vtr6OK.jpg);
+        background-image: url(/public/_imgs/home/home3OK.jpg), url(/public/_imgs/home/home4OK.jpg);
     }
 
     60% {
-        background-image: url(/public/_imgs/vtr6OK.jpg), url(/public/_imgs/vander1OKK.jpg);
+        background-image: url(/public/_imgs/home/home4OK.jpg), url(/public/_imgs/home/home5OK.jpg);
     }
 
     80% {
-        background-image: url(/public/_imgs/vander1OKK.jpg), url(/public/_imgs/imp3OKK.jpg);
+        background-image: url(/public/_imgs/home/home5OK.jpg), url(/public/_imgs/home/home3OK.jpg);
     }
 
     100% {
-        background-image: url(/public/_imgs/imp3OKK.jpg);
+        background-image: url(/public/_imgs/home/home3OK.jpg);
     }
 }
 
