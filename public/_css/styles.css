@@ -35,7 +35,7 @@ html {
     font-weight: 400;
     letter-spacing: .5ch;
     background-color: var(--second-color);
-    
+    overflow-x: hidden;
 
     
 }
@@ -530,14 +530,38 @@ h3 {
     padding: 4%;
     max-width: 70vw;
     text-align: center;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+     
 }
 
 
 .about-box.fade-about
 {
+    /* opacity: 1; */
+}
+
+.from-left {
+    transform: translateX(-50%);
+    transition: opacity 500ms ease-in;
+}
+
+.from-right {
+    transform: translateX(50%);
+    transition: opacity 500ms ease-in;
+
+}
+
+.from-left,
+.from-right {
+        transition: opacity 1500ms ease-in-out, transform 1500ms ease-in;
+        opacity: 0;
+    
+}
+
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
     opacity: 1;
+   
 }
 
 

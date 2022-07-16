@@ -9,12 +9,15 @@ const options = {
 const aboutFaderObserver = new IntersectionObserver((entries, faderObserver) => {
     entries.forEach(entry => {
         if(!entry.isIntersecting) {
+            entry.target.classList.remove("appear");
             entry.target.classList.remove("fade-about");
         }
         else {
             
+            entry.target.classList.add("appear");
             entry.target.classList.add("fade-about");
-           
+            
+
         }
     });
 },options);
